@@ -24,3 +24,4 @@ deploy:
   local_dir: public
   on:
     branch: gh-pages
+  fqdn: www.magicspace.eu
