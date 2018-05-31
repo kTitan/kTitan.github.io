@@ -24,7 +24,7 @@ All you have to do is editing this file:
 
 wp-content/plugins/easy-adsenser/easy-adsenser.php
 
-Then search for the function _ezAdSense_content_ (around line 440). In the beginning of this function it is checked if the ads should be inserted or not. Here I added the check if WpTouch view is active or not. This is the new line:
+Then search for the function *ezAdSense_content* (around line 440). In the beginning of this function it is checked if the ads should be inserted or not. Here I added the check if WpTouch view is active or not. This is the new line:
 
 {{< highlight php >}}
 if (function_exists('bnc_wptouch_is_mobile') && bnc_wptouch_is_mobile()) return $content ;  
@@ -46,4 +46,4 @@ Perhaps clear now your cache, but that was already all. Check it!
 
 Attached you will find a diff file for that. **But remember:** If you update you easy-adsenser plugin you have to do that again!
 
-[disable\_easy-adsenser\_on\_wptouch\_mobileview.diff](/static/disable_easy-adsenser_on_wptouch_mobileview.diff)
+[disable_easy-adsenser_on_wptouch_mobileview.diff](/files/disable_easy-adsenser_on_wptouch_mobileview.diff)
