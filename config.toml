@@ -9,6 +9,7 @@ theme = "minimal"
     author = "Alexander Schneider"
     description = "Find what you seek or get lost"
     githubUsername = "kTitan"
+    copyright = " "
     accent = "darkgray"
     showBorder = true
     backgroundColor = "white"
