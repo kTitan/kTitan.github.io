@@ -17,6 +17,7 @@ theme = "minimal"
     highlight = true
     highlightStyle = "solarized-dark"
     highlightLanguages = ["bash", "mysql", "test", "php"]
+    MathJax = false
 
 [[menu.main]]
     url = "/"
