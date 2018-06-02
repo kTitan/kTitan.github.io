@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Syscp to Froxlor Upgrade Guide</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+ <link rel="stylesheet" href="/css/solarized-dark.css"> 
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+ 
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.41" />
+        
+
+        
+    </head>
+
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Syscp to Froxlor Upgrade Guide</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/historical-blog-posts/">Historical Blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/kTitan/"><i class="fa fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/software/syscp-to-froxlor-upgrade-guide/">Syscp to Froxlor Upgrade Guide</a></h4>
+    <h5>March 26, 2010</h5>
+    
+    <a href="/tags/froxlor"><kbd class="item-tag">froxlor</kbd></a>
+    
+    <a href="/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="/tags/software"><kbd class="item-tag">Software</kbd></a>
+    
+    <a href="/tags/syscp"><kbd class="item-tag">syscp</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>In this Howto I will do an upgrade from syscp 1.4.2.1 to the fork froxlor in the current revision of 0.9.3. I hope to cover all fall sticks. But overall the upgrade is very painless and easy. Thanks a lot to guys of froxlor!</p>
+
+<p>I do this as always on a gentoo host. Its your choice to use the good ebuild to install froxlor or to download it by hand. Here I will cover the manual steps.</p>
+
+<p>First start with the basic stuff (download, uncompress, &hellip;)</p>
+
+<p></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /tmp
+wget -q http://files.froxlor.org/releases/froxlor-0.9.3.tar.gz
+wget -q http://files.froxlor.org/releases/froxlor-0.9.3.tar.gz.md5
+md5sum -c froxlor-0.9.3.tar.gz.md5
+tar xfz froxlor-0.9.3.tar.gz -C /var/www</code></pre></div>
+
+<p>Now froxlor is installed to /var/www/froxlor and we only have to correct the permission. I asume that you have an syscp user already created in the syscp installation. Because of this the ownership can differ (also if you use mod_fcgid), so please look in your syscp installation. I try to copy the ownership with this command. If it fails do it by yourself.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown <span style="color:#66d9ef">$(</span>ls -al /var/www/syscp/index.php | awk <span style="color:#e6db74">&#39;{print $3&#34;:&#34;$4}&#39;</span><span style="color:#66d9ef">)</span> /var/www/froxlor</code></pre></div>
+
+<p>The good thing is that we only have to copy the user data file over, because it has not changed.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -p /var/www/syscp/lib/userdata.inc.php /var/www/froxlor/lib/</code></pre></div>
+
+<p>Now it would a good time to disable the syscp cronjobs and do a backup the database. (The databasename will not be changed by upgrading to froxlor)</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm /etc/cron.d/syscp
+mysqldump -opt -p syscp &gt; /tmp/mysqldump_syscp.sql</code></pre></div>
+
+<p>Because of the new docroot we have to change the pathes in the vhost. I use apache and my vhost file is called 95_syscp-admin.conf</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s|/var/www/syscp|/var/www/froxlor|g&#39;</span> /etc/apache2/vhosts.d/95_syscp-admin.conf
+/etc/init.d/apache2 reload</code></pre></div>
+
+<p>Now you have to connect to your syscp/froxlor vhost, where you already should greeted with the nice froxlor logo. Please log in and let it do the needed database upgrades (done automatically). After that you can continue here.</p>
+
+<p>Froxlor also changes the name of generated include file for bind. If you use it, you have to do this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s|syscp_bind.conf|froxlor_bind.conf|g&#39;</span> /etc/bind/named.conf
+rm /etc/bind/syscp_bind.conf</code></pre></div>
+
+<p>You will find the same thing for awstats. You will see a failure immediatly if forget to do this, at the first run of cron.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv /etc/awstats/awstats.model.conf.syscp /etc/awstats/awstats.model.conf.froxlor</code></pre></div>
+
+<p>Now we should move the aps things from syscp to froxlor.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv /var/www/syscp/packages/* /var/www/froxlor/packages/
+mv /var/www/syscp/temp/* /var/www/froxlor/temp/</code></pre></div>
+
+<p>I find it saver to do the first froxlor cron run by myself, to check for generated failures.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/lib/php5/bin/php -q /var/www/froxlor/scripts/froxlor_master_cronjob.php</code></pre></div>
+
+<p>If everything was ok, you can now add the froxlor cron. The dos2unix line should not be needed anymore, because Dessa fixed the bug in the 0.9.4 release.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp /var/www/froxlor/templates/misc/configfiles/gentoo/cron/etc_cron.d_froxlor /etc/cron.d/froxlor
+dos2unix /etc/cron.d/froxlor
+chmod +x /etc/cron.d/froxlor</code></pre></div>
+
+<p>And that was it! Have fun with your new froxlor installation. If you have comments or more snares, please give me a info.</p>
+
+<p>IMHO: I find it very good that the old syscp developers has started this fork, and has fixed many many many bugs already 🙂</p>
+
+<p><strong><em>Changelog of this guide</em></strong></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">0001 - added dos2unix for froxlor cron job (bug in froxlor v0.9.3)
+0002 - fixed some pathes, which was mentioned by Dessa
+0003 - added aps info</code></pre></div></div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

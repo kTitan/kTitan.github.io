@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Direct mount xvda devices (or multi-partition isos)</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+ <link rel="stylesheet" href="/css/solarized-dark.css"> 
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+ 
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.41" />
+        
+
+        
+    </head>
+
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Direct mount xvda devices (or multi-partition isos)</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/historical-blog-posts/">Historical Blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/kTitan/"><i class="fa fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/linux/direct-mount-xvda-devices-or-multi-partition-isos/">Direct mount xvda devices (or multi-partition isos)</a></h4>
+    <h5>September 14, 2010</h5>
+    
+    <a href="/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="/tags/software"><kbd class="item-tag">Software</kbd></a>
+    
+    <a href="/tags/xen"><kbd class="item-tag">xen</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>Sometimes you will get in the need to directly mount an xvda device which is often used, if you (for example) install a debian virtual system in xen. Then this block device consists out of several partitions, which can not directly be used. But of course you can access the data of it, without the need of booting the guest os (domU).</p>
+
+<p>This is the same if you get an iso or any other type block devices which uses multiple partion slices.</p>
+
+<p></p>
+
+<p>First we have to find out, at which position the slice (which we want to mount) start. For this we use the fdisk command which will give us all information we need. You do all this directly on the dom0, you dont have to boot the domU in any way!</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xen ~ <span style="color:#75715e"># fdisk -ul /dev/vg/server02
+</span><span style="color:#75715e"></span>Disk /dev/vg/server02: <span style="color:#ae81ff">3221</span> MB, <span style="color:#ae81ff">3221225472</span> bytes
+<span style="color:#ae81ff">255</span> heads, <span style="color:#ae81ff">63</span> sectors/track, <span style="color:#ae81ff">391</span> cylinders, total <span style="color:#ae81ff">6291456</span> sectors
+Units <span style="color:#f92672">=</span> sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+Disk identifier: 0x00090c14
+
+ Device Boot      Start         End      Blocks   Id  System
+/dev/vg/server02   *        <span style="color:#ae81ff">2048</span>     <span style="color:#ae81ff">5894143</span>     <span style="color:#ae81ff">2946048</span>   <span style="color:#ae81ff">83</span>  Linux
+Partition <span style="color:#ae81ff">1</span> does not end on cylinder boundary.
+/dev/vg/server02         <span style="color:#ae81ff">5896190</span>     <span style="color:#ae81ff">6289407</span>      <span style="color:#ae81ff">196609</span>    <span style="color:#ae81ff">5</span>  Extended
+Partition <span style="color:#ae81ff">2</span> does not end on cylinder boundary.
+/dev/vg/server02         <span style="color:#ae81ff">5896192</span>     <span style="color:#ae81ff">6289407</span>      <span style="color:#ae81ff">196608</span>   <span style="color:#ae81ff">82</span>  Linux swap / Solaris</code></pre></div>
+
+<p>The important things are:</p>
+
+<ul>
+<li><p>Sector size   -&gt;  512</p></li>
+
+<li><p>Start of the partition slice   -&gt;  2048</p></li>
+</ul>
+
+<p>Now fire up an calculator and multiply these number to get the correct offset:</p>
+
+<p>512 * 2048 = <strong>1048576</strong></p>
+
+<p>With this value you can already <strong>mount</strong> the partition.</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount -o offset<span style="color:#f92672">=</span><span style="color:#ae81ff">1048576</span> /dev/vg/server02 /mnt/</code></pre></div></p>
+
+<p>That was easy or what do you think?</p></div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

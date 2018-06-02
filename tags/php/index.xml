@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on The Magic Space of the IT</title>
+    <link>/tags/php/</link>
+    <description>Recent content in Php on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Apr 2010 09:35:55 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Howto disable easy-adsenser if wptouch is active</title>
+      <link>/software/howto-disable-easy-adsenser-if-wptouch-is-active/</link>
+      <pubDate>Mon, 19 Apr 2010 09:35:55 +0000</pubDate>
+      
+      <guid>/software/howto-disable-easy-adsenser-if-wptouch-is-active/</guid>
+      <description>&lt;p&gt;WpTouch is a great plugin, if you want to optimize your wordpress blog for mobile content. It also comes with an integrated adsense option for the mobile content.&lt;/p&gt;
+
+&lt;p&gt;This is of course much better then the normal google ads.&lt;/p&gt;
+
+&lt;p&gt;But now comes the problem: In my blogs i often use easy-adsenser as the adsense mangement software. But if this is active, and you also activate the adsense option in WpTouch you will see ALL ads in the mobile view (the one from WpTouch and the one(s) from easy-adsenser). This can also be perhaps against the terms of google, depending how you setup easy-adsenser.&lt;/p&gt;
+
+&lt;p&gt;I looked a bit around in the code and found an easy we how to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Php mysql connect ignores port for localhost</title>
+      <link>/software/php-mysql-connect-ignores-port-for-localhost/</link>
+      <pubDate>Thu, 11 Mar 2010 19:45:18 +0000</pubDate>
+      
+      <guid>/software/php-mysql-connect-ignores-port-for-localhost/</guid>
+      <description>&lt;p&gt;I just tried to connect with php to an other mysql server which runs on my localhost on an other port then the standard 3306. I used this syntax:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;mysql_connect(&amp;#39;localhost:3307&amp;#39;, &amp;#39;mysql_user&amp;#39;, &amp;#39;mysql_password&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But the damn php always connected to the default mysql server with port 3306.&lt;/p&gt;
+
+&lt;p&gt;After a lot of google searches I found the solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix propel-gen error: Error reading project file build-propel.xml</title>
+      <link>/software/fix-propel-gen-error-error-reading-project-file-build-propel-xml/</link>
+      <pubDate>Tue, 26 Jan 2010 10:47:29 +0000</pubDate>
+      
+      <guid>/software/fix-propel-gen-error-error-reading-project-file-build-propel-xml/</guid>
+      <description>I had just installed propel-gen and phing with the pear method onto a new system. But after running the propel-gen I only get this error:
+$ propel-gen $PWD Buildfile: /usr/lib/php/data/propel_generator/pear-build.xml [resolvepath] Resolved /devel/build/propel propel-project-builder &amp;gt; projdircheckExists: propel-project-builder &amp;gt; projdircheck: propel-project-builder &amp;gt; configure: [echo] Loading project-specific props from /devel/build/propel/build.properties [property] Loading /devel/build/propel/build.properties propel-project-builder &amp;gt; main: [phing] Calling Buildfile &amp;#39;/devel/build/propel/build-propel.xml&amp;#39; with target &amp;#39;main&amp;#39; [phing] Error reading project file [wrapped: Unable to open /devel/build/propel/build-propel.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Syscp on The Magic Space of the IT</title>
+    <link>/tags/syscp/</link>
+    <description>Recent content in Syscp on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2010 14:38:11 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/syscp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Syscp to Froxlor Upgrade Guide</title>
+      <link>/software/syscp-to-froxlor-upgrade-guide/</link>
+      <pubDate>Fri, 26 Mar 2010 14:38:11 +0000</pubDate>
+      
+      <guid>/software/syscp-to-froxlor-upgrade-guide/</guid>
+      <description>&lt;p&gt;In this Howto I will do an upgrade from syscp 1.4.2.1 to the fork froxlor in the current revision of 0.9.3. I hope to cover all fall sticks. But overall the upgrade is very painless and easy. Thanks a lot to guys of froxlor!&lt;/p&gt;
+
+&lt;p&gt;I do this as always on a gentoo host. Its your choice to use the good ebuild to install froxlor or to download it by hand. Here I will cover the manual steps.&lt;/p&gt;
+
+&lt;p&gt;First start with the basic stuff (download, uncompress, &amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Froxlor - The New Syscp!</title>
+      <link>/software/froxlor-the-new-syscp/</link>
+      <pubDate>Fri, 12 Mar 2010 08:49:52 +0000</pubDate>
+      
+      <guid>/software/froxlor-the-new-syscp/</guid>
+      <description>&lt;p&gt;Just a short note for everyone who still deals with syscp as their server management software:&lt;/p&gt;
+
+&lt;p&gt;I think you all with have recognized, that there was long time no update of syscp.&lt;/p&gt;
+
+&lt;p&gt;If you have followed the development commits, or the forum you will have noticed the main reason: The most active developers has left the project long ago, and now the leader is totally alone.&lt;/p&gt;
+
+&lt;p&gt;Ok that was the bad news.&lt;/p&gt;
+
+&lt;p&gt;The good news  is, that many of the former developers has now build a fork named &lt;a href=&#34;http://www.froxlor.org/&#34;&gt;froxlor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;They already has published some bugfix releases and currently they are working on a clean rewrite with a good framework. So lets see what the future will bring. But I am already preparing my host to be migrated to froxlor!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>syscp with libnss-mysql</title>
+      <link>/linux/syscp-with-libnss-mysql/</link>
+      <pubDate>Mon, 31 Dec 2007 16:41:39 +0000</pubDate>
+      
+      <guid>/linux/syscp-with-libnss-mysql/</guid>
+      <description>&lt;p&gt;After installing a new rootserver with syscp, I decided to also install libnss-mysql support on the system. The advantage is, that it is easy to see which file belongs to which user. I hate to only see the uids and gids 😉&lt;/p&gt;
+
+&lt;p&gt;Because I use gentoo on the server, I emerged libnss-mysql. If you use an other distribution, you have to install it with your package manager if it is available. I used version 1.5 of it.&lt;/p&gt;
+
+&lt;p&gt;Now it was a bit tricky to find the right config for syscp for it. After a long search and many tries now it works good. Here are my configs:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

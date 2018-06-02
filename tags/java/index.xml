@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on The Magic Space of the IT</title>
+    <link>/tags/java/</link>
+    <description>Recent content in Java on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Nov 2009 10:31:32 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fix Firefox Java Plugin after Ubuntu 9.10 Upgrade</title>
+      <link>/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/</link>
+      <pubDate>Fri, 13 Nov 2009 10:31:32 +0000</pubDate>
+      
+      <guid>/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/</guid>
+      <description>&lt;p&gt;I had the problem, that my java plugin for Firefox was no longer working after I had upgraded my Ubuntu from 9.04 to 9.10 (karmic). In the old version it was necessary to add some lines to the sources.list. In the new version of ubuntu this is no longer necessary to install java.&lt;/p&gt;
+
+&lt;p&gt;After I had found this out, I thought the solution could be easy: Simply reinstall it!&lt;/p&gt;
+
+&lt;p&gt;So first the uninstall:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

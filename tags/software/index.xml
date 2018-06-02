@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on The Magic Space of the IT</title>
+    <link>/tags/software/</link>
+    <description>Recent content in Software on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Feb 2011 20:14:22 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick Tip: Remove forced subtitle from mkv</title>
+      <link>/linux/quick-tip-remove-forced-subtitle-from-mkv/</link>
+      <pubDate>Fri, 04 Feb 2011 20:14:22 +0000</pubDate>
+      
+      <guid>/linux/quick-tip-remove-forced-subtitle-from-mkv/</guid>
+      <description>&lt;p&gt;Do you have ever created an mkv (perhaps with the great tool makemkv) and after playing it, you discovered that the subtitle is set on by default?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix pygrub booting of debian squeeze</title>
+      <link>/linux/fix-pygrub-booting-of-debian-squeeze/</link>
+      <pubDate>Tue, 14 Sep 2010 13:02:48 +0000</pubDate>
+      
+      <guid>/linux/fix-pygrub-booting-of-debian-squeeze/</guid>
+      <description>&lt;p&gt;Debian Squeeze is now using grub2 as the default bootmanager. Because of this pygrub has some difficulties to boot the domU after installing it. Here are the things i found out, if you have more remarks, drop me a comment please.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Direct mount xvda devices (or multi-partition isos)</title>
+      <link>/linux/direct-mount-xvda-devices-or-multi-partition-isos/</link>
+      <pubDate>Tue, 14 Sep 2010 09:54:02 +0000</pubDate>
+      
+      <guid>/linux/direct-mount-xvda-devices-or-multi-partition-isos/</guid>
+      <description>&lt;p&gt;Sometimes you will get in the need to directly mount an xvda device which is often used, if you (for example) install a debian virtual system in xen. Then this block device consists out of several partitions, which can not directly be used. But of course you can access the data of it, without the need of booting the guest os (domU).&lt;/p&gt;
+
+&lt;p&gt;This is the same if you get an iso or any other type block devices which uses multiple partion slices.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iphone iTunes sync - disable Auto-Syncing</title>
+      <link>/software/iphone-itunes-sync-disable-auto-syncing/</link>
+      <pubDate>Tue, 03 Aug 2010 16:37:37 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-disable-auto-syncing/</guid>
+      <description>&lt;p&gt;There many reasons why you want to disable the itunes auto sync with the connected devices. My reason was that, I wanted to be sure, that I always have a &lt;em&gt;good&lt;/em&gt; working backup on my computer.&lt;/p&gt;
+
+&lt;p&gt;What happens if you have mistakenly deleted/changed some importent settings on you phone and then want to recover them via sync? Yes you connect the iPhone to your pc, and iTunes automatically sync you wrong data from the phone to the pc. Of course you can stop this, if you are fast enough. But isn´t it better to be sure to don´t have this problem?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iphone iTunes sync - fix repeatedly prompt for authorize</title>
+      <link>/software/iphone-itunes-sync-fix-repeatedly-prompt-for-authorize/</link>
+      <pubDate>Sat, 31 Jul 2010 18:58:46 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-fix-repeatedly-prompt-for-authorize/</guid>
+      <description>&lt;p&gt;If you have the Problem that iTunes ask on every sync to authorize (activate) your computer again here is an easy way to fix this.&lt;/p&gt;
+
+&lt;p&gt;I had this problem today once again, and now I decide to post this solution again.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Enable Windows RDP by registry</title>
+      <link>/software/enable-windows-rdp-by-registry/</link>
+      <pubDate>Wed, 19 May 2010 12:38:57 +0000</pubDate>
+      
+      <guid>/software/enable-windows-rdp-by-registry/</guid>
+      <description>A short info how to enable the windows RDP (Remote Desktop) directly in the registry.
+Open up the registry editor an go to this path:
+HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server There you will find fDenyTSConnection with the value 1. Change this to 0.
+fDenyTSConnection -&amp;gt; 0</description>
+    </item>
+    
+    <item>
+      <title>Howto disable easy-adsenser if wptouch is active</title>
+      <link>/software/howto-disable-easy-adsenser-if-wptouch-is-active/</link>
+      <pubDate>Mon, 19 Apr 2010 09:35:55 +0000</pubDate>
+      
+      <guid>/software/howto-disable-easy-adsenser-if-wptouch-is-active/</guid>
+      <description>&lt;p&gt;WpTouch is a great plugin, if you want to optimize your wordpress blog for mobile content. It also comes with an integrated adsense option for the mobile content.&lt;/p&gt;
+
+&lt;p&gt;This is of course much better then the normal google ads.&lt;/p&gt;
+
+&lt;p&gt;But now comes the problem: In my blogs i often use easy-adsenser as the adsense mangement software. But if this is active, and you also activate the adsense option in WpTouch you will see ALL ads in the mobile view (the one from WpTouch and the one(s) from easy-adsenser). This can also be perhaps against the terms of google, depending how you setup easy-adsenser.&lt;/p&gt;
+
+&lt;p&gt;I looked a bit around in the code and found an easy we how to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Syscp to Froxlor Upgrade Guide</title>
+      <link>/software/syscp-to-froxlor-upgrade-guide/</link>
+      <pubDate>Fri, 26 Mar 2010 14:38:11 +0000</pubDate>
+      
+      <guid>/software/syscp-to-froxlor-upgrade-guide/</guid>
+      <description>&lt;p&gt;In this Howto I will do an upgrade from syscp 1.4.2.1 to the fork froxlor in the current revision of 0.9.3. I hope to cover all fall sticks. But overall the upgrade is very painless and easy. Thanks a lot to guys of froxlor!&lt;/p&gt;
+
+&lt;p&gt;I do this as always on a gentoo host. Its your choice to use the good ebuild to install froxlor or to download it by hand. Here I will cover the manual steps.&lt;/p&gt;
+
+&lt;p&gt;First start with the basic stuff (download, uncompress, &amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Howto really completely disable mysql replication</title>
+      <link>/software/howto-completely-disable-mysql-replication/</link>
+      <pubDate>Wed, 17 Mar 2010 09:01:29 +0000</pubDate>
+      
+      <guid>/software/howto-completely-disable-mysql-replication/</guid>
+      <description>&lt;p&gt;There are many possibilities how-to setup a mysql replication. Here you will find a hopefully completely How-to really disable it. This is very useful for example if you want to make your slave a primary (standalone) server.&lt;/p&gt;
+
+&lt;p&gt;Connect to the mysql shell:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mysql -uroot -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Froxlor - The New Syscp!</title>
+      <link>/software/froxlor-the-new-syscp/</link>
+      <pubDate>Fri, 12 Mar 2010 08:49:52 +0000</pubDate>
+      
+      <guid>/software/froxlor-the-new-syscp/</guid>
+      <description>&lt;p&gt;Just a short note for everyone who still deals with syscp as their server management software:&lt;/p&gt;
+
+&lt;p&gt;I think you all with have recognized, that there was long time no update of syscp.&lt;/p&gt;
+
+&lt;p&gt;If you have followed the development commits, or the forum you will have noticed the main reason: The most active developers has left the project long ago, and now the leader is totally alone.&lt;/p&gt;
+
+&lt;p&gt;Ok that was the bad news.&lt;/p&gt;
+
+&lt;p&gt;The good news  is, that many of the former developers has now build a fork named &lt;a href=&#34;http://www.froxlor.org/&#34;&gt;froxlor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;They already has published some bugfix releases and currently they are working on a clean rewrite with a good framework. So lets see what the future will bring. But I am already preparing my host to be migrated to froxlor!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iphone iTunes sync - recover your Library Persistent ID</title>
+      <link>/software/iphone-itunes-sync-recover-your-library-persistent-id/</link>
+      <pubDate>Thu, 04 Feb 2010 13:17:59 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-recover-your-library-persistent-id/</guid>
+      <description>&lt;p&gt;Useful for example, if you&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;have formatted your pc without backup of your iTunes folder&lt;/li&gt;
+&lt;li&gt;want to sync your iPhone to an second pc&lt;/li&gt;
+&lt;li&gt;don´t have jailbreak on your iPhone&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Follow this easy steps and you will have your Library ID again, and that even if you don&amp;rsquo;t have jailbreak on your phone!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix propel-gen error: Error reading project file build-propel.xml</title>
+      <link>/software/fix-propel-gen-error-error-reading-project-file-build-propel-xml/</link>
+      <pubDate>Tue, 26 Jan 2010 10:47:29 +0000</pubDate>
+      
+      <guid>/software/fix-propel-gen-error-error-reading-project-file-build-propel-xml/</guid>
+      <description>I had just installed propel-gen and phing with the pear method onto a new system. But after running the propel-gen I only get this error:
+$ propel-gen $PWD Buildfile: /usr/lib/php/data/propel_generator/pear-build.xml [resolvepath] Resolved /devel/build/propel propel-project-builder &amp;gt; projdircheckExists: propel-project-builder &amp;gt; projdircheck: propel-project-builder &amp;gt; configure: [echo] Loading project-specific props from /devel/build/propel/build.properties [property] Loading /devel/build/propel/build.properties propel-project-builder &amp;gt; main: [phing] Calling Buildfile &amp;#39;/devel/build/propel/build-propel.xml&amp;#39; with target &amp;#39;main&amp;#39; [phing] Error reading project file [wrapped: Unable to open /devel/build/propel/build-propel.</description>
+    </item>
+    
+    <item>
+      <title>syscp with libnss-mysql</title>
+      <link>/linux/syscp-with-libnss-mysql/</link>
+      <pubDate>Mon, 31 Dec 2007 16:41:39 +0000</pubDate>
+      
+      <guid>/linux/syscp-with-libnss-mysql/</guid>
+      <description>&lt;p&gt;After installing a new rootserver with syscp, I decided to also install libnss-mysql support on the system. The advantage is, that it is easy to see which file belongs to which user. I hate to only see the uids and gids 😉&lt;/p&gt;
+
+&lt;p&gt;Because I use gentoo on the server, I emerged libnss-mysql. If you use an other distribution, you have to install it with your package manager if it is available. I used version 1.5 of it.&lt;/p&gt;
+
+&lt;p&gt;Now it was a bit tricky to find the right config for syscp for it. After a long search and many tries now it works good. Here are my configs:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

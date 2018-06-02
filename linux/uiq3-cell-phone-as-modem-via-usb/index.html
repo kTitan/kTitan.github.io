@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UIQ3 cell phone as modem via usb</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+ <link rel="stylesheet" href="/css/solarized-dark.css"> 
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+ 
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.41" />
+        
+
+        
+    </head>
+
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">UIQ3 cell phone as modem via usb</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/historical-blog-posts/">Historical Blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/kTitan/"><i class="fa fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/linux/uiq3-cell-phone-as-modem-via-usb/">UIQ3 cell phone as modem via usb</a></h4>
+    <h5>January 9, 2008</h5>
+    
+    <a href="/tags/cell-phone"><kbd class="item-tag">cell phone</kbd></a>
+    
+    <a href="/tags/gentoo"><kbd class="item-tag">Gentoo</kbd></a>
+    
+    <a href="/tags/handy"><kbd class="item-tag">Handy</kbd></a>
+    
+    <a href="/tags/hardware"><kbd class="item-tag">Hardware</kbd></a>
+    
+    <a href="/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="/tags/modem"><kbd class="item-tag">modem</kbd></a>
+    
+    <a href="/tags/ppp"><kbd class="item-tag">ppp</kbd></a>
+    
+    <a href="/tags/uiq3"><kbd class="item-tag">uiq3</kbd></a>
+    
+    <a href="/tags/usb"><kbd class="item-tag">usb</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>I got my new Sony Ericsson P1i a few weeks ago. Because I hate it to use Windows I wanted to get it working as an usb modem under linux. In my case again under gentoo 😉 My cell phone provider in Germany is Eplus. So if you use this with an other provider you will have to change some values of course. The cell phone itself has SymbianOS on it. The version its called UIQ3. The instructions should work for all QUI3 phones, as far as I know. I used very much sites to get this together, so I beg your pardon that I forgot which that all was.</p>
+
+<p>So first check if you have the need kernel options enabled:</p>
+
+<p></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; Device Drivers --&gt;
+&gt; USB support --&gt;
+&gt; USB Modem (CDC ACM) support
+&gt;
+&gt; Device Drivers --&gt;
+&gt; Network device support --&gt;
+&gt; PPP (point-to-point protocol) support
+&gt; PPP support for async serial ports</code></pre></div>
+
+<p>If you compiled the things as modules make sure to load them. (and perhaps to autload them via /etc/modules.autoload.d/kernel-2.6)</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; modprobe modprobe cdc-acm ppp_async</code></pre></div>
+
+<p>Of course we need also a ppp dialing program. I choose the normal commandline pppd, but I think this also can be done via some grapical ppp guis. But I did not tested it.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; emerge ppp</code></pre></div>
+
+<p>There are now only 3 files need to be created. If you use a gui this will perhaps be done via that&hellip;</p>
+
+<p>/etc/ppp/peers/3g</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; lcp-echo-failure 0
+&gt; lcp-echo-interval 0
+&gt; nodetach
+&gt; connect &#34;/usr/sbin/chat -f /etc/ppp/peers/3g-chat-connect&#34;
+&gt; disconnect &#34;/usr/sbin/chat -f /etc/ppp/peers/3g-chat-disconnect&#34;
+&gt; /dev/ttyACM1
+&gt; 115200
+&gt; crtscts
+&gt; local
+&gt; noipdefault
+&gt; ipcp-accept-local
+&gt; defaultroute
+&gt; usepeerdns
+&gt; novj
+&gt; nobsdcomp
+&gt; novjccomp
+&gt; nopcomp
+&gt; noaccomp
+&gt; noauth
+&gt; user &#34;eplus&#34;
+&gt; password empty
+&gt; mtu 1500
+&gt; mru 1500</code></pre></div>
+
+<p>/etc/ppp/peers/3g-chat-connect</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; TIMEOUT 5
+&gt; ECHO ON
+&gt; ABORT &#39;\nBUSY\r&#39;
+&gt; ABORT &#39;\nERROR\r&#39;
+&gt; ABORT &#39;\nNO ANSWER\r&#39;
+&gt; ABORT &#39;\nNO CARRIER\r&#39;
+&gt; ABORT &#39;\nNO DIALTONE\r&#39;
+&gt; ABORT &#39;\nRINGING\r\n\r\nRINGING\r&#39;
+&gt; &#34; \rAT
+&gt; TIMEOUT 12
+&gt; SAY &#34;Press CTRL-C to close the connection at any stage!&#34;
+&gt; SAY &#34;\ndefining PDP context...\n&#34;
+&gt; OK ATH
+&gt; OK ATE1
+&gt; OK &#39;AT+CGDCONT=1,&#34;IP&#34;,&#34;internet.eplus.de&#34;&#39;
+&gt; OK ATD*99#
+&gt; TIMEOUT 22
+&gt; SAY &#34;\nwaiting for connect...\n&#34;
+&gt; CONNECT &#34;&#34;
+&gt; SAY &#34;\nConnected.&#34;
+&gt; SAY &#34;\nIf the following ppp negotiations fail,\n&#34;
+&gt; SAY &#34;try restarting the phone.\n&#34;</code></pre></div>
+
+<p>/etc/ppp/peers/3g-chat-disconnect</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt; ABORT &#34;BUSY&#34;
+&gt; ABORT &#34;ERROR&#34;
+&gt; ABORT &#34;NO DIALTONE&#34;
+&gt; SAY &#34;\nSending break to the modem\n&#34;
+&gt; &#34;&#34; &#34;\K&#34;
+&gt; &#34;&#34; &#34;+++ATH&#34;
+&gt; SAY &#34;\nPDP context detached\n&#34;</code></pre></div>
+
+<p>That was it! now you can easyly connect</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; pppd call 3g</code></pre></div></div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

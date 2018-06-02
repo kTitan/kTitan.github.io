@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fix pygrub booting of debian squeeze</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+ <link rel="stylesheet" href="/css/solarized-dark.css"> 
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+ 
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.41" />
+        
+
+        
+    </head>
+
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Fix pygrub booting of debian squeeze</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/historical-blog-posts/">Historical Blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/kTitan/"><i class="fa fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/linux/fix-pygrub-booting-of-debian-squeeze/">Fix pygrub booting of debian squeeze</a></h4>
+    <h5>September 14, 2010</h5>
+    
+    <a href="/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="/tags/software"><kbd class="item-tag">Software</kbd></a>
+    
+    <a href="/tags/xen"><kbd class="item-tag">xen</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>Debian Squeeze is now using grub2 as the default bootmanager. Because of this pygrub has some difficulties to boot the domU after installing it. Here are the things i found out, if you have more remarks, drop me a comment please.</p>
+
+<p></p>
+
+<p>First off all, because of the new grub2 you have to use at least <strong>xen-tools</strong> in the version <strong>3.4.3</strong>. The developers has first added the support to 4.x, but then they have made a back-port and released this officially in 3.4.3.</p>
+
+<p>Ok now the new grub gets detected correctly by pygrub, but I still got an error message like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xen ~# xm create server02
+Error code: Using class <span style="color:#e6db74">&#39;grub.GrubConf.Grub2ConfigFile&#39;</span> to parse  /boot/grub/grub.cfg
+Error parameters: WARNING:root:Unknown directive load_video, Traceback  <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:, File <span style="color:#e6db74">&#34;/usr/bin/pygrub&#34;</span>, line <span style="color:#ae81ff">746</span>, in ?,  raise RuntimeError, <span style="color:#e6db74">&#34;Unable to find partition containing kernel&#34;</span>,  RuntimeError: Unable to find partition containing kernel,</code></pre></div>
+
+<p>The problem is an argument which is used in the grub.conf file. We have to change it a little bit. For this we have to mount the boot/root partition of the installed guest domU. If you don&rsquo;t know how you can do this, you can find the information <a href="/linux/direct-mount-xvda-devices-or-multi-partition-isos/">here</a>.</p>
+
+<ul>
+<li><p>Open the grub.cfg file (boot/grub/grub.cfg) in your favorite editor.</p></li>
+
+<li><p>Change msdos infos to a normal grub entry</p></li>
+</ul>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hd0,msdos1 -&gt; hd0,0</code></pre></div>
+
+<ul>
+<li><p>Do this for all entries.</p></li>
+
+<li><p>Keep in mind that debian perhaps update this file</p></li>
+</ul></div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uiq3 on The Magic Space of the IT</title>
+    <link>/tags/uiq3/</link>
+    <description>Recent content in Uiq3 on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2008 13:21:18 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/uiq3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UIQ3 cell phone as modem via usb</title>
+      <link>/linux/uiq3-cell-phone-as-modem-via-usb/</link>
+      <pubDate>Wed, 09 Jan 2008 13:21:18 +0000</pubDate>
+      
+      <guid>/linux/uiq3-cell-phone-as-modem-via-usb/</guid>
+      <description>&lt;p&gt;I got my new Sony Ericsson P1i a few weeks ago. Because I hate it to use Windows I wanted to get it working as an usb modem under linux. In my case again under gentoo 😉 My cell phone provider in Germany is Eplus. So if you use this with an other provider you will have to change some values of course. The cell phone itself has SymbianOS on it. The version its called UIQ3. The instructions should work for all QUI3 phones, as far as I know. I used very much sites to get this together, so I beg your pardon that I forgot which that all was.&lt;/p&gt;
+
+&lt;p&gt;So first check if you have the need kernel options enabled:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

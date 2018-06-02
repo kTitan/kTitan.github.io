@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fix Firefox Java Plugin after Ubuntu 9.10 Upgrade</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+ <link rel="stylesheet" href="/css/solarized-dark.css"> 
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+ 
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.41" />
+        
+
+        
+    </head>
+
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Fix Firefox Java Plugin after Ubuntu 9.10 Upgrade</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/historical-blog-posts/">Historical Blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/kTitan/"><i class="fa fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/">Fix Firefox Java Plugin after Ubuntu 9.10 Upgrade</a></h4>
+    <h5>November 13, 2009</h5>
+    
+    <a href="/tags/firefox"><kbd class="item-tag">firefox</kbd></a>
+    
+    <a href="/tags/java"><kbd class="item-tag">java</kbd></a>
+    
+    <a href="/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="/tags/ubuntu"><kbd class="item-tag">ubuntu</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>I had the problem, that my java plugin for Firefox was no longer working after I had upgraded my Ubuntu from 9.04 to 9.10 (karmic). In the old version it was necessary to add some lines to the sources.list. In the new version of ubuntu this is no longer necessary to install java.</p>
+
+<p>After I had found this out, I thought the solution could be easy: Simply reinstall it!</p>
+
+<p>So first the uninstall:</p>
+
+<p></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get remove  sun-java6-jre sun-java6-plugin
+<span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> user:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+
+java-common
+
+Use <span style="color:#e6db74">&#39;apt-get autoremove&#39;</span> to remove them.
+The following packages will be REMOVED:
+sun-java6-bin sun-java6-fonts sun-java6-jre sun-java6-plugin
+<span style="color:#ae81ff">0</span> upgraded, <span style="color:#ae81ff">0</span> newly installed, <span style="color:#ae81ff">4</span> to remove and <span style="color:#ae81ff">0</span> not upgraded.
+After this operation, 101MB disk space will be freed.
+
+Do you want to <span style="color:#66d9ef">continue</span> <span style="color:#f92672">[</span>Y/n<span style="color:#f92672">]</span>?
+
+<span style="color:#f92672">(</span>Reading database ... <span style="color:#ae81ff">132896</span> files and directories currently installed.<span style="color:#f92672">)</span>  
+Removing sun-java6-plugin ...
+Removing sun-java6-fonts ...
+Updating fontconfig cache <span style="color:#66d9ef">for</span> /usr/share/fonts/truetype/ttf-lucida
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Batang-Bold, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> ZenHei, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> UMingCN, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> ZenHei-CNS, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Dotum-Regular, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Batang-Regular, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Dotum-Bold, defaulting to <span style="color:#ae81ff">0</span>.
+Removing sun-java6-bin ...
+Removing sun-java6-jre ...
+Processing triggers <span style="color:#66d9ef">for</span> desktop-file-utils ...
+Processing triggers <span style="color:#66d9ef">for</span> shared-mime-info ...</code></pre></div>
+
+<p>And after that you can already install it again</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install  sun-java6-jre sun-java6-plugin sun-java6-fonts
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+sun-java6-bin
+
+The following NEW packages will be installed:
+sun-java6-bin sun-java6-fonts sun-java6-jre sun-java6-plugin
+
+<span style="color:#ae81ff">0</span> upgraded, <span style="color:#ae81ff">4</span> newly installed, <span style="color:#ae81ff">0</span> to remove and <span style="color:#ae81ff">0</span> not upgraded.
+Need to get 0B/35.5MB of archives.
+After this operation, 101MB of additional disk space will be used.
+
+Do you want to <span style="color:#66d9ef">continue</span> <span style="color:#f92672">[</span>Y/n<span style="color:#f92672">]</span>?
+
+Preconfiguring packages ...  
+Selecting previously deselected package sun-java6-jre.
+<span style="color:#f92672">(</span>Reading database ... <span style="color:#ae81ff">131983</span> files and directories currently installed.<span style="color:#f92672">)</span>
+Unpacking sun-java6-jre <span style="color:#f92672">(</span>from .../sun-java6-jre_6-15-1_all.deb<span style="color:#f92672">)</span> ...
+sun-dlj-v1-1 license has already been accepted
+Selecting previously deselected package sun-java6-bin.
+Unpacking sun-java6-bin <span style="color:#f92672">(</span>from .../sun-java6-bin_6-15-1_i386.deb<span style="color:#f92672">)</span> ...
+sun-dlj-v1-1 license has already been accepted
+Selecting previously deselected package sun-java6-fonts.
+Unpacking sun-java6-fonts <span style="color:#f92672">(</span>from .../sun-java6-fonts_6-15-1_all.deb<span style="color:#f92672">)</span> ...
+Selecting previously deselected package sun-java6-plugin.
+Unpacking sun-java6-plugin <span style="color:#f92672">(</span>from .../sun-java6-plugin_6-15-1_i386.deb<span style="color:#f92672">)</span> ...
+Processing triggers <span style="color:#66d9ef">for</span> shared-mime-info ...
+Processing triggers <span style="color:#66d9ef">for</span> desktop-file-utils ...
+Setting up sun-java6-bin <span style="color:#f92672">(</span><span style="color:#ae81ff">6</span>-15-1<span style="color:#f92672">)</span> ...
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/ControlPanel to provide /usr/bin/ControlPanel <span style="color:#f92672">(</span>ControlPanel<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/java to provide /usr/bin/java <span style="color:#f92672">(</span>java<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/java_vm to provide /usr/bin/java_vm <span style="color:#f92672">(</span>java_vm<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/javaws to provide /usr/bin/javaws <span style="color:#f92672">(</span>javaws<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/jcontrol to provide /usr/bin/jcontrol <span style="color:#f92672">(</span>jcontrol<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/keytool to provide /usr/bin/keytool <span style="color:#f92672">(</span>keytool<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/pack200 to provide /usr/bin/pack200 <span style="color:#f92672">(</span>pack200<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/policytool to provide /usr/bin/policytool <span style="color:#f92672">(</span>policytool<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/rmid to provide /usr/bin/rmid <span style="color:#f92672">(</span>rmid<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/rmiregistry to provide /usr/bin/rmiregistry <span style="color:#f92672">(</span>rmiregistry<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/unpack200 to provide /usr/bin/unpack200 <span style="color:#f92672">(</span>unpack200<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/orbd to provide /usr/bin/orbd <span style="color:#f92672">(</span>orbd<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/servertool to provide /usr/bin/servertool <span style="color:#f92672">(</span>servertool<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/bin/tnameserv to provide /usr/bin/tnameserv <span style="color:#f92672">(</span>tnameserv<span style="color:#f92672">)</span> in auto mode.
+update-alternatives: using /usr/lib/jvm/java-6-sun/jre/lib/jexec to provide /usr/bin/jexec <span style="color:#f92672">(</span>jexec<span style="color:#f92672">)</span> in auto mode.
+Setting up sun-java6-jre <span style="color:#f92672">(</span><span style="color:#ae81ff">6</span>-15-1<span style="color:#f92672">)</span> ...
+Setting up sun-java6-fonts <span style="color:#f92672">(</span><span style="color:#ae81ff">6</span>-15-1<span style="color:#f92672">)</span> ...
+Updating fontconfig cache <span style="color:#66d9ef">for</span> /usr/share/fonts/truetype/ttf-lucida
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Batang-Bold, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> ZenHei, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> UMingCN, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> ZenHei-CNS, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Dotum-Regular, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Batang-Regular, defaulting to <span style="color:#ae81ff">0</span>.
+No CIDSupplement specified <span style="color:#66d9ef">for</span> Dotum-Bold, defaulting to <span style="color:#ae81ff">0</span>.
+Setting up sun-java6-plugin <span style="color:#f92672">(</span><span style="color:#ae81ff">6</span>-15-1<span style="color:#f92672">)</span> ...</code></pre></div></p>
+
+<p>And after that it is working perfectly. 🙂</p></div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iphone on The Magic Space of the IT</title>
+    <link>/tags/iphone/</link>
+    <description>Recent content in Iphone on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Aug 2010 16:37:37 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iphone iTunes sync - disable Auto-Syncing</title>
+      <link>/software/iphone-itunes-sync-disable-auto-syncing/</link>
+      <pubDate>Tue, 03 Aug 2010 16:37:37 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-disable-auto-syncing/</guid>
+      <description>&lt;p&gt;There many reasons why you want to disable the itunes auto sync with the connected devices. My reason was that, I wanted to be sure, that I always have a &lt;em&gt;good&lt;/em&gt; working backup on my computer.&lt;/p&gt;
+
+&lt;p&gt;What happens if you have mistakenly deleted/changed some importent settings on you phone and then want to recover them via sync? Yes you connect the iPhone to your pc, and iTunes automatically sync you wrong data from the phone to the pc. Of course you can stop this, if you are fast enough. But isn´t it better to be sure to don´t have this problem?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iphone iTunes sync - fix repeatedly prompt for authorize</title>
+      <link>/software/iphone-itunes-sync-fix-repeatedly-prompt-for-authorize/</link>
+      <pubDate>Sat, 31 Jul 2010 18:58:46 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-fix-repeatedly-prompt-for-authorize/</guid>
+      <description>&lt;p&gt;If you have the Problem that iTunes ask on every sync to authorize (activate) your computer again here is an easy way to fix this.&lt;/p&gt;
+
+&lt;p&gt;I had this problem today once again, and now I decide to post this solution again.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iphone iTunes sync - recover your Library Persistent ID</title>
+      <link>/software/iphone-itunes-sync-recover-your-library-persistent-id/</link>
+      <pubDate>Thu, 04 Feb 2010 13:17:59 +0000</pubDate>
+      
+      <guid>/software/iphone-itunes-sync-recover-your-library-persistent-id/</guid>
+      <description>&lt;p&gt;Useful for example, if you&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;have formatted your pc without backup of your iTunes folder&lt;/li&gt;
+&lt;li&gt;want to sync your iPhone to an second pc&lt;/li&gt;
+&lt;li&gt;don´t have jailbreak on your iPhone&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Follow this easy steps and you will have your Library ID again, and that even if you don&amp;rsquo;t have jailbreak on your phone!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

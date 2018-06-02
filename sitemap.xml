@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/linux/quick-tip-remove-forced-subtitle-from-mkv/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/fix-pygrub-booting-of-debian-squeeze/</loc>
+    <lastmod>2010-09-14T13:02:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/direct-mount-xvda-devices-or-multi-partition-isos/</loc>
+    <lastmod>2010-09-14T09:54:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/iphone-itunes-sync-disable-auto-syncing/</loc>
+    <lastmod>2010-08-03T16:37:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/iphone-itunes-sync-fix-repeatedly-prompt-for-authorize/</loc>
+    <lastmod>2010-07-31T18:58:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/enable-windows-rdp-by-registry/</loc>
+    <lastmod>2010-05-19T12:38:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/howto-disable-easy-adsenser-if-wptouch-is-active/</loc>
+    <lastmod>2010-04-19T09:35:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/syscp-to-froxlor-upgrade-guide/</loc>
+    <lastmod>2010-03-26T14:38:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/howto-completely-disable-mysql-replication/</loc>
+    <lastmod>2010-03-17T09:01:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/froxlor-the-new-syscp/</loc>
+    <lastmod>2010-03-12T08:49:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/php-mysql-connect-ignores-port-for-localhost/</loc>
+    <lastmod>2010-03-11T19:45:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/iphone-itunes-sync-recover-your-library-persistent-id/</loc>
+    <lastmod>2010-02-04T13:17:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/fix-propel-gen-error-error-reading-project-file-build-propel-xml/</loc>
+    <lastmod>2010-01-26T10:47:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/using-independent-clocks-in-xen-domu-ntp/</loc>
+    <lastmod>2010-01-14T09:53:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/</loc>
+    <lastmod>2009-11-13T10:31:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/uiq3-cell-phone-as-modem-via-usb/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/linux/syscp-with-libnss-mysql/</loc>
+    <lastmod>2007-12-31T16:41:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/wordpress-23-no-working-mod_rewrite/</loc>
+    <lastmod>2007-12-30T19:21:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/.htaccess/</loc>
+    <lastmod>2007-12-30T19:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cell-phone/</loc>
+    <lastmod>2010-08-03T16:37:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/firefox/</loc>
+    <lastmod>2009-11-13T10:31:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/froxlor/</loc>
+    <lastmod>2010-03-26T14:38:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gentoo/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/gentoo/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/handy/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hardware/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/historical-blog-posts/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/iphone/</loc>
+    <lastmod>2010-08-03T16:37:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/itunes/</loc>
+    <lastmod>2010-08-03T16:37:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/java/</loc>
+    <lastmod>2009-11-13T10:31:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2010-09-14T13:02:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/modem/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mysql/</loc>
+    <lastmod>2010-03-17T09:01:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/permalink/</loc>
+    <lastmod>2007-12-30T19:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/php/</loc>
+    <lastmod>2010-04-19T09:35:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ppp/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/recover/</loc>
+    <lastmod>2010-02-04T13:17:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/registry/</loc>
+    <lastmod>2010-05-19T12:38:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/software/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/software/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/syscp/</loc>
+    <lastmod>2010-03-26T14:38:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2007-12-30T19:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2011-02-04T20:14:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2009-11-13T10:31:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/uiq3/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/usb/</loc>
+    <lastmod>2008-01-09T13:21:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wordpress/</loc>
+    <lastmod>2010-04-19T09:35:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/xen/</loc>
+    <lastmod>2010-09-14T13:02:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

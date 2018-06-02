@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on The Magic Space of the IT</title>
+    <link>/categories/linux/</link>
+    <description>Recent content in Linux on The Magic Space of the IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Feb 2011 20:14:22 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick Tip: Remove forced subtitle from mkv</title>
+      <link>/linux/quick-tip-remove-forced-subtitle-from-mkv/</link>
+      <pubDate>Fri, 04 Feb 2011 20:14:22 +0000</pubDate>
+      
+      <guid>/linux/quick-tip-remove-forced-subtitle-from-mkv/</guid>
+      <description>&lt;p&gt;Do you have ever created an mkv (perhaps with the great tool makemkv) and after playing it, you discovered that the subtitle is set on by default?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix pygrub booting of debian squeeze</title>
+      <link>/linux/fix-pygrub-booting-of-debian-squeeze/</link>
+      <pubDate>Tue, 14 Sep 2010 13:02:48 +0000</pubDate>
+      
+      <guid>/linux/fix-pygrub-booting-of-debian-squeeze/</guid>
+      <description>&lt;p&gt;Debian Squeeze is now using grub2 as the default bootmanager. Because of this pygrub has some difficulties to boot the domU after installing it. Here are the things i found out, if you have more remarks, drop me a comment please.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Direct mount xvda devices (or multi-partition isos)</title>
+      <link>/linux/direct-mount-xvda-devices-or-multi-partition-isos/</link>
+      <pubDate>Tue, 14 Sep 2010 09:54:02 +0000</pubDate>
+      
+      <guid>/linux/direct-mount-xvda-devices-or-multi-partition-isos/</guid>
+      <description>&lt;p&gt;Sometimes you will get in the need to directly mount an xvda device which is often used, if you (for example) install a debian virtual system in xen. Then this block device consists out of several partitions, which can not directly be used. But of course you can access the data of it, without the need of booting the guest os (domU).&lt;/p&gt;
+
+&lt;p&gt;This is the same if you get an iso or any other type block devices which uses multiple partion slices.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Using independent clocks in xen domU (ntp)</title>
+      <link>/linux/using-independent-clocks-in-xen-domu-ntp/</link>
+      <pubDate>Thu, 14 Jan 2010 09:53:47 +0000</pubDate>
+      
+      <guid>/linux/using-independent-clocks-in-xen-domu-ntp/</guid>
+      <description>Normally the xen domU´s are using the same clock as the dom0. But I had the problem, that there was a timeshift of 20 minutes on one of my hosts. I did not find out the reason for this, so I decided to simply setup ntp also on this.
+To make this work you have to tell the kernel of the virtual machine to use its on clock. With this command you set the parameter online.</description>
+    </item>
+    
+    <item>
+      <title>Fix Firefox Java Plugin after Ubuntu 9.10 Upgrade</title>
+      <link>/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/</link>
+      <pubDate>Fri, 13 Nov 2009 10:31:32 +0000</pubDate>
+      
+      <guid>/linux/fix-firefox-java-plugin-after-ubuntu-9-10-upgrade/</guid>
+      <description>&lt;p&gt;I had the problem, that my java plugin for Firefox was no longer working after I had upgraded my Ubuntu from 9.04 to 9.10 (karmic). In the old version it was necessary to add some lines to the sources.list. In the new version of ubuntu this is no longer necessary to install java.&lt;/p&gt;
+
+&lt;p&gt;After I had found this out, I thought the solution could be easy: Simply reinstall it!&lt;/p&gt;
+
+&lt;p&gt;So first the uninstall:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UIQ3 cell phone as modem via usb</title>
+      <link>/linux/uiq3-cell-phone-as-modem-via-usb/</link>
+      <pubDate>Wed, 09 Jan 2008 13:21:18 +0000</pubDate>
+      
+      <guid>/linux/uiq3-cell-phone-as-modem-via-usb/</guid>
+      <description>&lt;p&gt;I got my new Sony Ericsson P1i a few weeks ago. Because I hate it to use Windows I wanted to get it working as an usb modem under linux. In my case again under gentoo 😉 My cell phone provider in Germany is Eplus. So if you use this with an other provider you will have to change some values of course. The cell phone itself has SymbianOS on it. The version its called UIQ3. The instructions should work for all QUI3 phones, as far as I know. I used very much sites to get this together, so I beg your pardon that I forgot which that all was.&lt;/p&gt;
+
+&lt;p&gt;So first check if you have the need kernel options enabled:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>syscp with libnss-mysql</title>
+      <link>/linux/syscp-with-libnss-mysql/</link>
+      <pubDate>Mon, 31 Dec 2007 16:41:39 +0000</pubDate>
+      
+      <guid>/linux/syscp-with-libnss-mysql/</guid>
+      <description>&lt;p&gt;After installing a new rootserver with syscp, I decided to also install libnss-mysql support on the system. The advantage is, that it is easy to see which file belongs to which user. I hate to only see the uids and gids 😉&lt;/p&gt;
+
+&lt;p&gt;Because I use gentoo on the server, I emerged libnss-mysql. If you use an other distribution, you have to install it with your package manager if it is available. I used version 1.5 of it.&lt;/p&gt;
+
+&lt;p&gt;Now it was a bit tricky to find the right config for syscp for it. After a long search and many tries now it works good. Here are my configs:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
